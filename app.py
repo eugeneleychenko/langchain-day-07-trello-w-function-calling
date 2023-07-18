@@ -3,8 +3,8 @@ from trello import TrelloClient
 import streamlit as st
 from dotenv import find_dotenv, load_dotenv
 
-API_KEY = "ba1a0562f743f2337c2b96ec6f6de6fd"
-TOKEN = "ATTAb961f7f7f9a043b96094ed440a5668f9fff3ac92cf24f75f923aac5c2cc0de8a67F4E36B"
+API_KEY = os.getenv("API_KEY")
+TOKEN = os.getenv("TOKEN")
 
 client = TrelloClient(
     api_key=API_KEY,
