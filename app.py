@@ -3,8 +3,8 @@ import streamlit as st
 import os
 from dotenv import find_dotenv, load_dotenv
 
-API_KEY = os.getenv("API_KEY")
-TOKEN = os.getenv("TOKEN")
+API_KEY = "ba1a0562f743f2337c2b96ec6f6de6fd"
+TOKEN = "ATTAb961f7f7f9a043b96094ed440a5668f9fff3ac92cf24f75f923aac5c2cc0de8a67F4E36B"
 AUTH_PARAMS = {'key': API_KEY, 'token': TOKEN}
 
 
@@ -98,7 +98,11 @@ def add_comment(card_id, comment):
 
 def main():
     load_dotenv(find_dotenv())
+    
+    st.header("Control Your Trello")
+    
     boards = get_boards()
+    
     if not boards:
         st.error('No boards found.')
     else:
